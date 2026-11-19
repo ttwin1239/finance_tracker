@@ -1,17 +1,12 @@
-# test_app
+# Практическая работа: Учёт расходов (Finance Tracker)
 
-A new Flutter project.
+Мобильное приложение для учёта личных финансов на фреймворке Flutter.
 
-## Getting Started
+## 🚀 Реализованный функционал:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*   **Экраны и навигация:** Более 5 экранов (Расходы, Аналитика, Курсы валют, Настройки, Форма добавления, Вход по PIN). Навигация через `BottomNavigationBar` и `Navigator`.
+*   **Хранение данных:** Использование `sqflite` для сохранения расходов и курсов валют, а также `shared_preferences` для настроек темы и PIN-кода.
+*   **Сеть и устройство:** Запрос к API Центробанка (cbr-xml-daily.ru) с обработкой ошибок и кэшированием. Локальные уведомления (`flutter_local_notifications`) с запросом разрешения.
+*   **Архитектура:** Repository + ViewModel (ChangeNotifier + provider). Зависимости передаются через конструктор.
+*   **Интерфейс:** Поддержка тёмной и светлой темы, поиск по расходам.
+*   **Тесты:** Написано 9+ unit-тестов и виджет-тестов (в папке `test/`).
